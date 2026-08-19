@@ -1,0 +1,4 @@
+NOT FOUND$2026-08-18 18:07:25.854303 
+Status Code: 404 
+Response: {"error":"Endpoint not defined"} 
+Failed URL: http://localhost:4500/?method=user.getRecentTracks&format=json&limit=10&user=NehanZafar&api_key=43ef961ec0545d5bdbaae21cb57eba55$2026-08-18 18:07:25.857226 
