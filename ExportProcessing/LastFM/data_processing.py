@@ -10,7 +10,7 @@ from utils.logger import logger
 ImportFilePath = "SourceProcessing/exportedFiles/"
 exportFilePath = "ExportProcessing/exportedFiles/"
 
-log = logger()
+log = logger("Data Processing")
 
 class processer:
     def __init__(self, JSONdata):
@@ -25,8 +25,8 @@ class processer:
         try:
             for data in self.dataProcessed:
                 exportPath = exportFilePath + data.attrs['Name'] + "_" + data.attrs['type'] + ".csv"
+                log.success("converted to a csv file!")
                 data.to_csv(exportPath, index=False)
-            log.success("converted to a csv file!")
         except Exception as e:
             log.error("Error in converting to csv file!!")
             log.error(e)

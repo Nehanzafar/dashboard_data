@@ -2,16 +2,20 @@ import json
 
 from dotenv import load_dotenv
 import os
+from SourceProcessing.BaseClass import SourceProcessing
 from utils.request_handler import Request_handler
 from utils.logger import logger
 
 
 load_dotenv()
 export_file_path = "SourceProcessing/exportedFiles/"
-log = logger()
 
+try:
+    log = logger("LastFM Data Fetching")
+except Exception as e:
+    print(e)
 
-class LastFMProcesser:
+class LastFMProcesser(SourceProcessing):
     def __init__(self):
         # get the enviroment variables
         self.api_key = os.getenv("LASTFM_API_KEY")

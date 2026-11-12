@@ -6,7 +6,7 @@ from utils.logger import logger
 # recenttracks data
 def transformer_recenttracks(data) -> pd.DataFrame:
     # logger for logging data
-    log = logger()
+    log = logger("LastFM recenttracks Transformer")
     usefullData = data["recenttracks"]["track"]
 
     
@@ -55,7 +55,7 @@ def transformer_recenttracks(data) -> pd.DataFrame:
 
 def transformer_topartists(data) -> pd.DataFrame:
     # logger for logging data
-    log = logger()
+    log = logger("LastFM TopArtists Transformer")
     usefullData = data["topartists"]["artist"]
 
     
